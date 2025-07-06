@@ -14,6 +14,9 @@ let diff=0;
 let Id;
 
 function Start(){
+    if (isRunning){
+        return;
+    }
     let D=new Date();
     date_st=new Date(D-diff);
     isRunning=true;
@@ -27,12 +30,13 @@ function Start(){
 document.getElementById("Start").onclick=Start;
 
 function Stop(){
-    clearTimeout(Id);
+    clearInterval(Id);
+    isRunning=false;
 }
 document.getElementById("Stop").onclick=Stop;
 
 function Reset(){
-    clearTimeout(Id);
+    clearInterval(Id);
     isRunning=false;
     date_st=0;
     date2=0;
