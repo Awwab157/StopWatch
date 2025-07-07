@@ -45,3 +45,5 @@ function Reset(){
     document.getElementById("time").textContent=sectostr(0);
 }
 document.getElementById("Reset").onclick=Reset;
+
+//Git pRactice
